@@ -1,0 +1,237 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 70px; /* space for fixed nav */
+  box-sizing: border-box;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 15px 20px;
+  background-color: white;
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  box-sizing: border-box;
+}
+
+nav a {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  text-decoration-color: #6C5F8D;
+}
+
+nav a:visited {
+  color: black;
+}
+
+.about_project {
+  padding: 40px;
+}
+
+.pashupati_hotel_images {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  gap: 30px;
+  padding: 50px 10px;
+  scroll-behavior: smooth;
+  background-color: #BB96C1;
+  margin-top: 10px;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  max-width: 100vw;
+}
+
+.pashupati_hotel_images::-webkit-scrollbar {
+  display: none;
+}
+
+.pashupati_hotel_images img {
+  width: 550px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.project_title {
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: underline;
+  text-decoration-color: #4C406E;
+  text-underline-offset: 15px;
+  text-decoration-thickness: 1px;
+  text-align: center;
+}
+
+footer {
+  background-color: #4C406E;
+  color: white;
+  padding: 20px 15px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer a {
+  color: white;
+}
+
+.footer-right {
+  text-align: end;
+}
+
+.footer-left {
+  text-align: start;
+}
+
+.highlights_and_challenges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  margin: 30px auto;
+  flex-wrap: wrap;
+  width: 95%;
+  height: auto;
+}
+
+.box {
+  width: 500px;
+  height: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+p, ul {
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+.project-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.previous-project,
+.next-project {
+  text-decoration: none;
+  color: #4C406E;
+}
+
+.next-project a:visited {
+  color: #4C406E;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .pashupati_hotel_images {
+    padding: 30px 20px;
+    gap: 20px;
+  }
+
+  .pashupati_hotel_images img {
+    width: 400px;
+  }
+
+  .highlights_and_challenges {
+    gap: 50px;
+    width: 100%;
+  }
+
+  .box {
+    width: 90%;
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .pashupati_hotel_images {
+    gap: 15px;
+    padding: 20px 10px;
+  }
+
+  .pashupati_hotel_images img {
+    width: 300px;
+  }
+
+  .about_project {
+    padding: 20px 15px;
+  }
+
+  p, ul {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pashupati_hotel_images {
+    flex-direction: column;
+    overflow-x: visible;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .pashupati_hotel_images img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 20px;
+  }
+
+  .project_title {
+    font-size: 24px;
+    padding: 0 10px;
+  }
+
+  .highlights_and_challenges {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .box {
+    width: 100%;
+    padding: 15px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .footer-right,
+  .footer-left {
+    text-align: center;
+  }
+}
